@@ -21,8 +21,8 @@ class LinearRegressionClass:
             dw = (1/num_samples) * np.dot(X.T, (y_predicted - y))
             db = (1/num_samples) * np.sum(y_predicted - y)
 
-            self.weights = (self.weights - self.learning_rate) * dw
-            self.bias = (self.bias - self.learning_rate) * db
+            self.weights = self.weights - self.learning_rate * dw
+            self.bias = self.bias - self.learning_rate * db
 
     def predict(self, X):
         y_predicted = np.dot(X, self.weights) + self.bias
