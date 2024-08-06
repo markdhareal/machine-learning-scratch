@@ -1,1 +1,1 @@
-# Linear Regression from Scratch
+# Linear Regression Algorithm from Scratch
