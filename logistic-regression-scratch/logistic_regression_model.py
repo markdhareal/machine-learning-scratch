@@ -20,7 +20,7 @@ class LogisticRegression():
             linear_prediction = np.dot(X, self.weights) + self.bias
             prediction = sigmoid(linear_prediction)
 
-            dw = (1/n_samples) * np.dot(X.T - (prediction - y))
+            dw = (1/n_samples) * np.dot(X.T, (prediction - y))
             db = (1/n_samples) * np.sum(prediction - y)
 
             self.weights = self.weights - self.learning_rate * dw
